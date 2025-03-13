@@ -10,6 +10,7 @@
     <color name="dark_smoky">#6D6D6D7B</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yorkshire_go_orange">#FF914D</color>
+    <color name="darker_go_orange">#663A1F</color>
     <color name="bright_yellow">#F9F940</color>
     <color name="dark_yellow">#837A34</color>
 </resources>

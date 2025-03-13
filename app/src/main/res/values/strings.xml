@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">YorkshireGo</string>
+    <string name="start_location_switcher">Slide to swap start location with destination or via</string>
+    <string name="via_location_switcher">Slide to swap via location with start or destination.</string>
+    <string name="destination_location_switcher">Slide to swap destination location with start or via.</string>
 </resources>
