@@ -13,14 +13,14 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="27dp"
         android:layout_marginEnd="72dp"
         android:background="@color/white"
         android:hint="Start Location"
         android:paddingStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
         android:id="@+id/editText2"
@@ -107,22 +107,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/soft_corners_dark_grey_button"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:text="Yorkshire Go"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
@@ -167,13 +151,12 @@
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@android:string/untitled"
         android:src="@android:drawable/ic_menu_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:layout_editor_absoluteY="85dp" />
 
     <Button
         android:id="@+id/button6"
@@ -197,5 +180,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="243dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yorkshire_go_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
