@@ -9,47 +9,49 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
+        android:id="@+id/startLocation"
+        android:layout_width="280dp"
         android:layout_height="48dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="72dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
         android:background="@color/white"
         android:hint="Start Location"
         android:paddingStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toStartOf="@id/imageButton4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/imageButton"
+        tools:layout_editor_absoluteY="90dp" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="0dp"
+        android:id="@+id/viaLocation"
+        android:layout_width="280dp"
         android:layout_height="48dp"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="9dp"
         android:background="@color/white"
         android:hint="Via"
         android:paddingStart="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintEnd_toEndOf="@+id/startLocation"
+        app:layout_constraintStart_toEndOf="@id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/startLocation" />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="0dp"
+        android:id="@+id/destinationLocation"
+        android:layout_width="280dp"
         android:layout_height="48dp"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="9dp"
+        android:layout_marginBottom="14dp"
         android:background="@color/white"
         android:hint="Destination"
         android:paddingStart="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintBottom_toTopOf="@+id/planButton"
+        app:layout_constraintEnd_toEndOf="@+id/viaLocation"
+        app:layout_constraintStart_toEndOf="@id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/viaLocation" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/savedButton"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -60,11 +62,11 @@
         android:text="Saved"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/plannerButton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/plannerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -75,11 +77,11 @@
         android:text="Planner"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+        app:layout_constraintStart_toEndOf="@+id/savedButton" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/settingsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -91,10 +93,10 @@
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/plannerButton" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/newsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -103,24 +105,8 @@
         android:background="@drawable/soft_corners_button"
         android:text="News"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/startLocation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/soft_corners_dark_grey_button"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:text="Yorkshire Go"
-        android:textAppearance="@android:style/TextAppearance.Material.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -133,9 +119,9 @@
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@string/start_location_switcher"
         android:src="?android:attr/listChoiceIndicatorSingle"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/startLocation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/newsButton" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -146,7 +132,7 @@
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@string/via_location_switcher"
         android:src="?android:attr/listChoiceIndicatorSingle"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/viaLocation"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
@@ -159,7 +145,7 @@
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@string/destination_location_switcher"
         android:src="?android:attr/listChoiceIndicatorSingle"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintEnd_toStartOf="@+id/destinationLocation"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -167,25 +153,29 @@
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@android:string/untitled"
         android:src="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toTopOf="@+id/planButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toEndOf="@+id/startLocation" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/planButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/soft_corners_button"
         android:text="Plan"
         android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destinationLocation" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -196,6 +186,17 @@
         android:src="@android:drawable/picture_frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/destinationLocation" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="264dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="19dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yorkshire_go"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/newsButton"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
