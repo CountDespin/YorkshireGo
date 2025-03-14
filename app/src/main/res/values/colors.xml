@@ -13,4 +13,6 @@
     <color name="darker_go_orange">#663A1F</color>
     <color name="bright_yellow">#F9F940</color>
     <color name="dark_yellow">#837A34</color>
+    <color name="grey">#FF888888</color>
+    <color name= "dark_grey">#FF424242</color>
 </resources>
