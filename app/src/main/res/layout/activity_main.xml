@@ -10,16 +10,15 @@
 
     <EditText
         android:id="@+id/startLocation"
-        android:layout_width="280dp"
+        android:layout_width="272dp"
         android:layout_height="48dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="8dp"
         android:background="@color/white"
         android:hint="Start Location"
         android:paddingStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/viaLocation"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toStartOf="@id/imageButton4"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/imageButton"
@@ -27,30 +26,28 @@
 
     <EditText
         android:id="@+id/viaLocation"
-        android:layout_width="280dp"
+        android:layout_width="272dp"
         android:layout_height="48dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@color/white"
         android:hint="Via"
         android:paddingStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/destinationLocation"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="@+id/startLocation"
         app:layout_constraintStart_toEndOf="@id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/startLocation" />
 
     <EditText
         android:id="@+id/destinationLocation"
-        android:layout_width="280dp"
+        android:layout_width="272dp"
         android:layout_height="48dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="14dp"
         android:background="@color/white"
         android:hint="Destination"
         android:paddingStart="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/planButton"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="@+id/viaLocation"
         app:layout_constraintStart_toEndOf="@id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/viaLocation" />
@@ -105,72 +102,77 @@
         android:layout_width="wrap_content"
         android:layout_height="36dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
         android:background="@drawable/soft_corners_button"
         android:text="News"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/startLocation"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/soft_corners_button"
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@string/start_location_switcher"
         android:src="?android:attr/listChoiceIndicatorSingle"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/startLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newsButton" />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/soft_corners_button"
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@string/via_location_switcher"
         android:src="?android:attr/listChoiceIndicatorSingle"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/viaLocation"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="81dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/soft_corners_button"
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@string/destination_location_switcher"
         android:src="?android:attr/listChoiceIndicatorSingle"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/destinationLocation"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="130dp"
+        android:background="@drawable/soft_corners_button"
         android:backgroundTint="@color/yorkshire_go_orange"
         android:contentDescription="@android:string/untitled"
         android:src="@android:drawable/ic_menu_add"
-        app:layout_constraintBottom_toTopOf="@+id/planButton"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/startLocation"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
@@ -195,9 +197,10 @@
         android:layout_width="373dp"
         android:layout_height="280dp"
         android:layout_marginTop="72dp"
-
+        android:layout_marginBottom="37dp"
         android:scaleType="centerCrop"
         android:src="@drawable/huddersfield_map_free"
+        app:layout_constraintBottom_toTopOf="@+id/savedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/destinationLocation" />
@@ -206,11 +209,42 @@
         android:id="@+id/imageView2"
         android:layout_width="264dp"
         android:layout_height="34dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/soft_orners_text_bar"
         android:scaleType="centerCrop"
         android:src="@drawable/yorkshire_go"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/newsButton"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="178dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="57dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="642dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="315dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
