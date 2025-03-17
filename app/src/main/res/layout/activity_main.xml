@@ -8,6 +8,21 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/planButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/soft_corners_button"
+        android:text="Plan"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destinationLocation" />
+
     <EditText
         android:id="@+id/startLocation"
         android:layout_width="272dp"
@@ -78,9 +93,10 @@
         android:backgroundTint="@color/yorkshire_go_orange"
         android:text="Planner"
         android:textAllCaps="false"
+        android:onClick="openMapActivity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/settingsButton"
-        app:layout_constraintStart_toEndOf="@+id/savedButton" />
+        app:layout_constraintStart_toEndOf="@+id/savedButton"/>
 
     <Button
         android:id="@+id/settingsButton"
@@ -100,7 +116,7 @@
     <Button
         android:id="@+id/newsButton"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
+        android:layout_height="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="14dp"
@@ -180,7 +196,7 @@
     <Button
         android:id="@+id/planButton"
         android:layout_width="wrap_content"
-        android:layout_height="36dp"
+        android:layout_height="48dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="24dp"
@@ -198,7 +214,9 @@
         android:layout_height="280dp"
         android:layout_marginTop="72dp"
         android:layout_marginBottom="37dp"
+        android:focusable="true"
         android:scaleType="centerCrop"
+        android:clickable="true"
         android:src="@drawable/huddersfield_map_free"
         app:layout_constraintBottom_toTopOf="@+id/savedButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,7 +229,6 @@
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/soft_orners_text_bar"
         android:scaleType="centerCrop"
         android:src="@drawable/yorkshire_go"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"

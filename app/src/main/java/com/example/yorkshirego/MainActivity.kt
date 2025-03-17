@@ -1,6 +1,9 @@
 package com.example.yorkshirego
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -19,19 +22,16 @@ import com.example.yorkshirego.ui.theme.YorkshireGoTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            YorkshireGoTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Yorkshire",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        val plannerButton = findViewById<Button>(R.id.plannerButton)
+        plannerButton.setOnClickListener {
+            val intent = Intent(this, Map::class.java)
+            startActivity(intent)
+        }
+
         }
     }
-}
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
